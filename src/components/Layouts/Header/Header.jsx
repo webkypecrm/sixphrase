@@ -253,7 +253,7 @@ const typeToRouteMap = {
                             <div className="searchinputs" id="dropdownMenuClickable">
                                 <input
                                     type="text"
-                                    placeholder="Search"
+                                    placeholder="Search leads"
                                     onChange={handleSearch}
                                 // onClick={() => {
                                 //     navigate("/sales/leads")
@@ -292,7 +292,7 @@ const typeToRouteMap = {
                                 ></i>
                             </Link>
                         </li>
-                        <li className="nav-item dropdown">
+                        {/* <li className="nav-item dropdown">
                             <Link
                                 to="#"
                                 className="btn btn-header-list"
@@ -447,45 +447,46 @@ const typeToRouteMap = {
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                        {/* <li className="nav-item">
                             <Link to={route.chat} className="btn btn-help"
                                 data-tooltip-id="tooltip"
                                 data-tooltip-content="Chat"
                             >
                                 <i className="ti ti-message-exclamation" />
                             </Link>
-                            <Tooltip id="tooltip"
+                          
+
+                        </li> */}
+                        <li className="nav-item">
+                            <Link to={route.upcomingCalls} className="btn btn-help"
+                                data-tooltip-id="tooltip"
+                                data-tooltip-content="Call Reminders"
+                            >
+                                <i className="ti ti-phone-calling" />
+                            </Link>
+                              <Tooltip id="tooltip"
                                 style={{ backgroundColor: "#F3EDFF", color: "#3C2371" }}
                             />
 
                         </li>
                         <li className="nav-item">
-                            <Link to={route.audioCall} className="btn btn-help"
+                            <Link to={route.upcomingAppointments} className="btn btn-help"
                                 data-tooltip-id="tooltip"
-                                data-tooltip-content="Audio"
-                            >
-                                <i className="ti ti-phone-calling" />
-                            </Link>
-
-                        </li>
-                        <li className="nav-item">
-                            <Link to={route.videoCall} className="btn btn-help"
-                                data-tooltip-id="tooltip"
-                                data-tooltip-content="Video"
+                                data-tooltip-content="Meeting Reminders"
                             >
                                 <i className="ti ti-video-plus" />
                             </Link>
 
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to={route.callHistory} className="btn btn-help"
                                 data-tooltip-id="tooltip"
                                 data-tooltip-content="Call History"
                             >
                                 <i className="ti ti-history-toggle" />
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link to={route.calendar} className="btn btn-help"
                                 data-tooltip-id="tooltip"
@@ -513,7 +514,7 @@ const typeToRouteMap = {
                         <li className="nav-item">
                             <Link to={route.fileManager} className="btn btn-help"
                                 data-tooltip-id="tooltip"
-                                data-tooltip-content="File Manager"
+                                data-tooltip-content="Client Folders"
                             >
                                 <i className="ti ti-file-analytics" />
                             </Link>
@@ -526,7 +527,7 @@ const typeToRouteMap = {
                                 <i className="ti ti-help-hexagon" />
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to={route.membershipplan} className="btn btn-chart-pie"
                                 data-tooltip-id="plans-tooltip"
                                 data-tooltip-content="Plans"
@@ -536,12 +537,12 @@ const typeToRouteMap = {
                             <Tooltip id="plans-tooltip"
                                 style={{ backgroundColor: "#FFF7D8", color: "#FFA201" }}
                             />
-                        </li>
+                        </li> */}
                     </ul>
                 </li>
                 {/* /Nav List */}
                 {/* Email */}
-                <li className="nav-item nav-item-email nav-item-box">
+                {/* <li className="nav-item nav-item-email nav-item-box">
                     <Link to={route.email}
                         data-tooltip-id="email-tooltip"
                         data-tooltip-content="Email"
@@ -552,7 +553,7 @@ const typeToRouteMap = {
                     <Tooltip id="email-tooltip"
                         style={{ backgroundColor: "lightgrey", color: "#3E4265" }}
                     />
-                </li>
+                </li> */}
                 {/* /Email */}
                 {/* Notifications */}
                 <li className="nav-item dropdown nav-item-box">

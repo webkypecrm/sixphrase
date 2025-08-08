@@ -118,20 +118,23 @@ const Login = () => {
   return (
     <>
     <div className="account-content">
-      <div className="login-wrapper account-bg">
+      <div className="login-wrapper bg-white "
+      // account-bg
+      style={{justifyContent: "center"}}
+      >
         <div
           className="login-content"
           style={{ backgroundColor: "rgb(255 255 255)" }}
         >
           <form onSubmit={handleLogin}>
             <div className="login-user-info">
-              <div className="login-logo">
+              <div className="login-logo" style={{ display: "flex", justifyContent: "center",marginBottom: "45px" }}>
                 <img
-                  src="/assets/img/webkype-logo.png"
+                  src="/six-logo.png"
                   className="img-fluid"
                   alt="Logo"
                   style={{
-                    height: "3rem",
+                    height: "5rem",
                   }}
                 />
               </div>
@@ -155,17 +158,19 @@ const Login = () => {
                     ))}
                   </div> */}
                   <div className="login_admin">
-                    {["Admin", "Staff", "Customer"].map((role, index) => {
+                    {["Admin", "Staff", "Client"].map((role, index) => {
                       const isSelected = selectedRole === role;
 
                       // const imageName =
                       //   role === "Admin" ? "admin_default" : "staff_default";
                       const imageName =
                         role === "Admin"
-                          ? "admin_default"
+                          // ? "admin_default"
+                          ? "admin2-6p"
                           : role === "Staff"
-                          ? "staff_default"
-                          : "customer_default";
+                          // ? "staff_default"
+                          ? "staff7-6p"
+                          : "client2-6p";
 
                       return (
                         <div
@@ -284,7 +289,7 @@ const Login = () => {
               )}
 
               <div className="copyright-text">
-                <p>Copyright ©2025 - WEBKYPE</p>
+                <p>Copyright ©2025 - Caasaa</p>
               </div>
             </div>
           </form>

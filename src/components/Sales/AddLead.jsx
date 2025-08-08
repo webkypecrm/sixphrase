@@ -360,7 +360,7 @@ const AddLead = ({ togglePopup, addLead, sourceOptions, categoryOptions, country
                                     <div className="col-md-4">
                                         <div className="form-wrap">
                                             <label className="col-form-label">
-                                                Industry <span className="text-danger"></span>
+                                                Segment <span className="text-danger"></span>
                                             </label>
                                             <Select
                                                 classNamePrefix="react-select"
@@ -473,7 +473,7 @@ const AddLead = ({ togglePopup, addLead, sourceOptions, categoryOptions, country
                                                         name="lead_have_company"
                                                         onChange={() => { setHaveCompany((prev) => !prev) }}
                                                     />
-                                                    <label htmlFor="lead_have_company">Have a company?</label>
+                                                    <label htmlFor="lead_have_company">Have a company/organization?</label>
                                                 </div>
                                             </div>
                                         </div>

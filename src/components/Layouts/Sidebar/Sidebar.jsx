@@ -18,6 +18,8 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
   const profilePic = localStorage.getItem("profilePic") || "";
   const [sidebarRefresh, setSidebarRefresh] = useState(false);
 
+  
+
   const navigate = useNavigate();
 
   //  Modal
@@ -65,8 +67,8 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
           <div className="sidebar-inner slimscroll">
             <div id="sidebar-menu" className="sidebar-menu">
               <ul>
-                <li className="clinicdropdown">
-                  <Link to="profile.html">
+                <li className="clinicdropdown" >
+                  <Link to="profile.html"style={{background:"black"}}>
                     <img
                       src={
                         profilePic || "/assets/img/profiles/admin_default.jpeg"
@@ -75,15 +77,16 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
                       alt="Profile"
                     />
                     <div className="user-names">
-                      <h5>{profileName}</h5>
-                      <h6>{type === "1" ? "Admin" : "Employee"}</h6>
+                      {/* <h5>{profileName}</h5> */}
+                      <h5>6P Admin</h5>
+                      <h6>{type === "1" ? "6P Admin" : "Employee"}</h6>
                     </div>
                   </Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <h6 className="submenu-hdr">Default Module</h6>
+                  <h6 className="submenu-hdr">Phase One</h6>
                   <ul>
                     {/* Dashboard */}
                     <li className="submenu">
@@ -373,94 +376,7 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
                         </ul>
                       )}
                     </li>
-
-                    <h6 className="submenu-hdr mt-3">Business Module</h6>
-                    {/* Product */}
-                    <li className="submenu">
-                      <Link
-                        to="#"
-                        className={
-                          openMenus["Product"]
-                            ? "subdrop active"
-                            : "subdrop active"
-                        }
-                        onClick={() =>
-                          setOpenMenus({
-                            ...openMenus,
-                            Product: !openMenus.Product,
-                          })
-                        }
-                      >
-                        <i className="ti ti-chart-arcs"></i>
-                        <span>Product</span>
-                        <span
-                          className="menu-arrow"
-                          style={{
-                            transform: openMenus["Product"]
-                              ? "rotate(90deg)"
-                              : "rotate(0deg)",
-                            transition: "transform 0.3s ease",
-                          }}
-                        ></span>
-                      </Link>
-                      {openMenus.Product && (
-                        <ul>
-                          {/* <li
-                            data-bs-toggle="modal"
-                            data-bs-target="#temp_modal"
-                          >
-                            <Link to={"#"}>Category</Link>
-                          </li>
-                          <li
-                            data-bs-toggle="modal"
-                            data-bs-target="#temp_modal"
-                          >
-                            <Link to={"#"}>Sub Category</Link>
-                          </li>
-                          <li
-                            data-bs-toggle="modal"
-                            data-bs-target="#temp_modal"
-                          >
-                            <Link to={"#"}>Last Category</Link>
-                          </li>
-                          <li
-                            data-bs-toggle="modal"
-                            data-bs-target="#temp_modal"
-                          >
-                            <Link to={"#"}>Brand</Link>
-                          </li>
-                          <li
-                            data-bs-toggle="modal"
-                            data-bs-target="#temp_modal"
-                          >
-                            <Link to={"#"}>OEM</Link>
-                          </li> */}
-                          <li>
-                            <Link to={route.product}>Add Product</Link>
-                          </li>
-                          <li
-                            data-bs-toggle="modal"
-                            data-bs-target="#temp_modal"
-                          >
-                            <Link to={"#"}>Manage Products</Link>
-                          </li>
-                          <li
-                            data-bs-toggle="modal"
-                            data-bs-target="#temp_modal"
-                          >
-                            <Link to={"#"}>Inventory</Link>
-                          </li>
-                          <li
-                            data-bs-toggle="modal"
-                            data-bs-target="#temp_modal"
-                          >
-                            <Link to={"#"}>Warehouse</Link>
-                          </li>
-                        </ul>
-                      )}
-                    </li>
-
-                    {/* Services */}
+                     {/* Services */}
                     <li className="submenu">
                       <Link
                         to="#"
@@ -532,6 +448,65 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
                         </ul>
                       )}
                     </li>
+
+                    <h6 className="submenu-hdr mt-3">Phase Two</h6>
+                    {/* Product */}
+                    {/* <li className="submenu">
+                      <Link
+                        to="#"
+                        className={
+                          openMenus["Product"]
+                            ? "subdrop active"
+                            : "subdrop active"
+                        }
+                        onClick={() =>
+                          setOpenMenus({
+                            ...openMenus,
+                            Product: !openMenus.Product,
+                          })
+                        }
+                      >
+                        <i className="ti ti-chart-arcs"></i>
+                        <span>Product</span>
+                        <span
+                          className="menu-arrow"
+                          style={{
+                            transform: openMenus["Product"]
+                              ? "rotate(90deg)"
+                              : "rotate(0deg)",
+                            transition: "transform 0.3s ease",
+                          }}
+                        ></span>
+                      </Link>
+                      {openMenus.Product && (
+                        <ul>
+    
+                          <li>
+                            <Link to={route.product}>Add Product</Link>
+                          </li>
+                          <li
+                            data-bs-toggle="modal"
+                            data-bs-target="#temp_modal"
+                          >
+                            <Link to={"#"}>Manage Products</Link>
+                          </li>
+                          <li
+                            data-bs-toggle="modal"
+                            data-bs-target="#temp_modal"
+                          >
+                            <Link to={"#"}>Inventory</Link>
+                          </li>
+                          <li
+                            data-bs-toggle="modal"
+                            data-bs-target="#temp_modal"
+                          >
+                            <Link to={"#"}>Warehouse</Link>
+                          </li>
+                        </ul>
+                      )}
+                    </li> */}
+
+                   
 
                     {/* Accounts */}
                     <li className="submenu">
@@ -719,178 +694,7 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
                       )}
                     </li>
 
-                    <h6 className="submenu-hdr mt-3">AI Add-ons</h6>
-
-                    {/* Chatbot */}
-                    {hasPermission2("Chatbot") && (
-                      <li className="submenu">
-                        <Link
-                          to={route.chatbot}
-                          className={
-                            openMenus["AIAddons"]
-                              ? "subdrop active"
-                              : "subdrop active"
-                          }
-                          onClick={() =>
-                            setOpenMenus({
-                              ...openMenus,
-                              AIAddons: !openMenus.AIAddons,
-                            })
-                          }
-                        >
-                          <i className="ti ti-ticket"></i>
-                          <span>Chatbot</span>
-                        </Link>
-                      </li>
-                    )}
-                    {/* AI Chatbot */}
-                    {hasPermission2("AI Chatbot") && (
-                      <li
-                        className="submenu"
-                        // data-bs-toggle="modal"
-                        // data-bs-target="#temp_modal"
-                      >
-                        <Link
-                          to={route.Aichatbot}
-                          className={
-                            openMenus["AIAddons"]
-                              ? "subdrop active"
-                              : "subdrop active"
-                          }
-                          onClick={() =>
-                            setOpenMenus({
-                              ...openMenus,
-                              AIAddons: !openMenus.AIAddons,
-                            })
-                          }
-                        >
-                          <i className="ti ti-ticket"></i>
-                          <span>AI Chatbot</span>
-                        </Link>
-                      </li>
-                    )}
-                    {/* Data Analysis */}
-                    {hasPermission2("Data Analysis") && (
-                      <li
-                        className="submenu"
-                        data-bs-toggle="modal"
-                        data-bs-target="#temp_modal"
-                      >
-                        <Link
-                          to="#"
-                          className={
-                            openMenus["AIAddons"]
-                              ? "subdrop active"
-                              : "subdrop active"
-                          }
-                          onClick={() =>
-                            setOpenMenus({
-                              ...openMenus,
-                              AIAddons: !openMenus.AIAddons,
-                            })
-                          }
-                        >
-                          <i className="ti ti-ticket"></i>
-                          <span>Data Analysis</span>
-                        </Link>
-                      </li>
-                    )}
-                    {/* AI Avatar */}
-                    {hasPermission2("AI Avatar") && (
-                      <li
-                        className="submenu"
-                        data-bs-toggle="modal"
-                        data-bs-target="#temp_modal"
-                      >
-                        <Link
-                          to="#"
-                          className={
-                            openMenus["AIAddons"]
-                              ? "subdrop active"
-                              : "subdrop active"
-                          }
-                          onClick={() =>
-                            setOpenMenus({
-                              ...openMenus,
-                              AIAddons: !openMenus.AIAddons,
-                            })
-                          }
-                        >
-                          <i className="ti ti-ticket"></i>
-                          <span>AI Avatar</span>
-                        </Link>
-                      </li>
-                    )}
-                    {/* AI Automation */}
-                    {hasPermission2("AI Automation") && (
-                      <li
-                        className="submenu"
-                        data-bs-toggle="modal"
-                        data-bs-target="#temp_modal"
-                      >
-                        <Link
-                          to="#"
-                          className={
-                            openMenus["AIAddons"]
-                              ? "subdrop active"
-                              : "subdrop active"
-                          }
-                          onClick={() =>
-                            setOpenMenus({
-                              ...openMenus,
-                              AIAddons: !openMenus.AIAddons,
-                            })
-                          }
-                        >
-                          <i className="ti ti-ticket"></i>
-                          <span>AI Automation</span>
-                        </Link>
-                      </li>
-                    )}
-                    {/* Marketing */}
-                    <li>
-                      <li className="submenu">
-                        <Link
-                          to="#"
-                          className={
-                            openMenus["Marketing"]
-                              ? "subdrop active"
-                              : "subdrop active"
-                          }
-                          onClick={() =>
-                            setOpenMenus({
-                              ...openMenus,
-                              Marketing: !openMenus.Marketing,
-                            })
-                          }
-                        >
-                          <i className="ti ti-chart-arcs"></i>
-                          <span>Marketing</span>
-                          <span
-                            className="menu-arrow"
-                            style={{
-                              transform: openMenus["Marketing"]
-                                ? "rotate(90deg)"
-                                : "rotate(0deg)",
-                              transition: "transform 0.3s ease",
-                            }}
-                          ></span>
-                        </Link>
-                        {openMenus.Marketing && (
-                          <ul>
-                            <li>
-                              <Link to={route.campaign}>Campaigns</Link>
-                            </li>
-                            <li>
-                              <Link to={route.email}>Emails</Link>
-                            </li>
-                            <li>
-                              <Link to={route.deals}>Deals</Link>
-                            </li>
-                          </ul>
-                        )}
-                      </li>
-                    </li>
+          
 
                     <h6 className="submenu-hdr mt-3">Setting</h6>
                     {/* Setup */}
@@ -1068,7 +872,7 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
                             )}
                           </li>
 
-                          <li className="submenu submenu-two subdrop">
+                          {/* <li className="submenu submenu-two subdrop">
                             <Link
                               to="#"
                               className={
@@ -1108,7 +912,7 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
                                 </li>
                               </ul>
                             )}
-                          </li>
+                          </li> */}
 
                           <li className="submenu submenu-two subdrop">
                             <Link
@@ -1577,7 +1381,7 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
                     </li>
 
                     {/* SUBSCRIPTION */}
-                    <li className="submenu">
+                    {/* <li className="submenu">
                       <Link
                         to="#"
                         className={
@@ -1626,7 +1430,7 @@ const Sidebar = ({ setExpandMenu, miniSidebar }) => {
                           </li>
                         </ul>
                       )}
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
               </ul>

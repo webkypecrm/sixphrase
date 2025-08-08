@@ -1719,32 +1719,11 @@ const Services = () => {
                             </div>
                           </div>
 
+                          
                           <div className="col-md-6">
                             <div className="form-wrap">
                               <label className="col-form-label">
-                                Service OEM{" "}
-                                {/* <span className="text-danger">*</span> */}
-                              </label>
-                              <Select
-                                className="select"
-                                options={productOEMOptions}
-                                placeholder="Choose"
-                                classNamePrefix="react-select"
-                                value={
-                                  productOEMOptions.find(
-                                    (o) => o.value === formData.productOEMId
-                                  ) || null
-                                }
-                                onChange={(opt) =>
-                                  handleSelectChange("productOEMId", opt)
-                                }
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-6">
-                            <div className="form-wrap">
-                              <label className="col-form-label">
-                                Service Brand{" "}
+                                Service Brand / Partner{" "}
                                 {/* <span className="text-danger">*</span> */}
                               </label>
                               <Select

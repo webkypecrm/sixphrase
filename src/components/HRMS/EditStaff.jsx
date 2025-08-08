@@ -366,7 +366,7 @@ const EditStaff = ({
                             name="name"
                             type="text"
                             className="form-control"
-                            required
+                            
                             value={formData.name}
                             onChange={handleInputChange}
                           />
@@ -417,7 +417,7 @@ const EditStaff = ({
                             name="email"
                             type="email"
                             className="form-control"
-                            required
+                            
                             value={formData.email}
                             onChange={handleInputChange}
                           />
@@ -437,7 +437,7 @@ const EditStaff = ({
                             name="fatherName"
                             type="text"
                             className="form-control"
-                            required
+                            // 
                             value={formData.fatherName}
                             onChange={handleInputChange}
                           />
@@ -461,7 +461,7 @@ const EditStaff = ({
                             name="mobile"
                             type="number"
                             className="form-control"
-                            required
+                            
                             value={formData.mobile}
                             onChange={handleInputChange}
                           />
@@ -584,7 +584,7 @@ const EditStaff = ({
                                                   name="panNo"
                                                   type="text"
                                                   className="form-control"
-                                                  required
+                                                  
                                                   value={formData.panNo}
                                                   onChange={handleInputChange}
                                                 />
@@ -599,7 +599,7 @@ const EditStaff = ({
                                                   name="aadharNo"
                                                   type="number"
                                                   className="form-control"
-                                                  required
+                                                  
                                                   value={formData.aadharNo}
                                                   onChange={handleInputChange}
                                                   onKeyDown={(e) => {
@@ -621,7 +621,7 @@ const EditStaff = ({
                                                   name="pfAccountNo"
                                                   type="number"
                                                   className="form-control"
-                                                  required
+                                                  
                                                   value={formData.pfAccountNo}
                                                   onChange={handleInputChange}
                                                   onKeyDown={(e) => {
@@ -643,7 +643,7 @@ const EditStaff = ({
                                                   name="bankName"
                                                   type="text"
                                                   className="form-control"
-                                                  required
+                                                  
                                                   value={formData.bankName}
                                                   onChange={handleInputChange}
                                                 />
@@ -658,7 +658,7 @@ const EditStaff = ({
                                                   name="bankAccountNo"
                                                   type="number"
                                                   className="form-control"
-                                                  required
+                                                  
                                                   value={formData.bankAccountNo}
                                                   onChange={handleInputChange}
                                                   onKeyDown={(e) => {
@@ -680,7 +680,7 @@ const EditStaff = ({
                                                   name="bankIFSC"
                                                   type="text"
                                                   className="form-control"
-                                                  required
+                                                  
                                                   value={formData.bankIFSC}
                                                   onChange={handleInputChange}
                                                 />
@@ -762,7 +762,7 @@ const EditStaff = ({
                               type={passwords[0] ? "text" : "password"}
                               className="form-control"
                               name="password"
-                              // required
+                              // 
                               minLength={6}
                               value={formData.password}
                               onChange={handleInputChange}
@@ -791,7 +791,6 @@ const EditStaff = ({
                               type={passwords[1] ? "text" : "password"}
                               className="form-control"
                               name="confirmPassword"
-                              // required
                               value={formData.confirmPassword}
                               onChange={handleInputChange}
                             />

@@ -381,7 +381,7 @@ const AddNewCompany = ({
                                                 <div className="col-md-6">
                                                     <div className="form-wrap">
                                                         <label className="col-form-label">
-                                                            Industry <span className="text-danger">*</span>
+                                                            Segment <span className="text-danger">*</span>
                                                         </label>
                                                         <Select
                                                             classNamePrefix="react-select"
