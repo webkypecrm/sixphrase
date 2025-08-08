@@ -1,0 +1,16 @@
+.ant-pagination-options {
+  display: none;
+}
+
+.ant-select
+  .ant-select-outlined
+  .ant-pagination-options-size-changer
+  .css-dev-only-do-not-override-d2lrxs
+  .ant-select-single
+  .ant-select-show-arrow
+  .ant-select-show-search {
+  display: none;
+}
+.ant-pagination-options {
+  color: #f19823;
+}
